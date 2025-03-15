@@ -10,11 +10,11 @@ pkg install -y expect wget qemu-utils qemu-common qemu-system-x86_64-headless op
 mkdir -p "$INSTALL_DIR" && cd "$INSTALL_DIR"
 
 # Download necessary files
-curl "https://raw.githubusercontent.com/Zeioth/termux-docker/main/alpine/config.env" > "$INSTALL_DIR/config.env"
-curl "https://raw.githubusercontent.com/Zeioth/termux-docker/main/alpine/ssh2qemu.sh" > "$INSTALL_DIR/ssh2qemu.sh"
-curl "https://raw.githubusercontent.com/Zeioth/termux-docker/main/alpine/startqemu.sh" > "$INSTALL_DIR/startqemu.sh"
-curl "https://raw.githubusercontent.com/Zeioth/termux-docker/main/alpine/installqemu.expect" > "$INSTALL_DIR/installqemu.expect"
-curl "https://raw.githubusercontent.com/Zeioth/termux-docker/main/alpine/answerfile" > "$INSTALL_DIR/answerfile"
+curl "https://raw.githubusercontent.com/devopsexpertlearning/termux-docker/main/alpine/config.env" > "$INSTALL_DIR/config.env"
+curl "https://raw.githubusercontent.com/devopsexpertlearning/termux-docker/main/alpine/ssh2qemu.sh" > "$INSTALL_DIR/ssh2qemu.sh"
+curl "https://raw.githubusercontent.com/devopsexpertlearning/termux-docker/main/alpine/startqemu.sh" > "$INSTALL_DIR/startqemu.sh"
+curl "https://raw.githubusercontent.com/devopsexpertlearning/termux-docker/main/alpine/installqemu.expect" > "$INSTALL_DIR/installqemu.expect"
+curl "https://raw.githubusercontent.com/devopsexpertlearning/termux-docker/main/alpine/answerfile" > "$INSTALL_DIR/answerfile"
 
 # Give execution permissions
 chmod +x "$INSTALL_DIR/ssh2qemu.sh"
