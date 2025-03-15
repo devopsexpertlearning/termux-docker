@@ -7,7 +7,7 @@ This repo is a combination of [this](https://github.com/egandro/docker-qemu-arm)
   Create the virtual machine with:
   
   ``` sh
-  curl -o setup.sh https://raw.githubusercontent.com/Zeioth/termux-docker/main/setup.sh && chmod 755 ./setup.sh && ./setup.sh
+  curl -o setup.sh https://raw.githubusercontent.com/devopsexpertlearing/termux-docker/main/setup.sh && chmod 755 ./setup.sh && ./setup.sh
   ```
 
   And start it with:
