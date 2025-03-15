@@ -80,3 +80,46 @@ This repo is a combination of [this](https://github.com/egandro/docker-qemu-arm)
 * **Do I need to run the docker images every time?** No. You can see we are using "--restart=always" which means the images will run automatically every time you run "startqemu.sh".
 * **Give me a short explanation about everything** The setup.sh script uses qemu to create a virtual machine based on an alpine iso image, then docker is installed on it. From this point you can optionally install the rest of the software using docker. Docker run containers. Kubernetes is used for automated deployment. Portainer allow you to manage containers visually. Prometheus can be connected to everything to gather data. Grafana is a frontent for prometheus, mostly used to check logs.
 * **How do I make changes in a container permanent?** You can see when we use 'docker run' we are always using the -v parameter. That's a volume. After you exit your container, volumes will remain. By default we use ~/docker-volumes/container-name. Remember this IS inside the qemu virtual machine, NOT in your Termux directories.
+
+
+Increase Disk Space:
+
+
+qemu-img resize alpine.img 10G
+
+
+To see details:
+
+qemu-img info alpine.img
+
+
+Check Partitions:
+
+
+lsblk
+
+
+apk add parted
+
+parted /dev/sda
+
+print
+
+resizepart 2 100%
+
+quit
+
+resize2fs /dev/sda2
+
+
+
+cat /proc/sys/kernel/random/uuid > /etc/machine-id
+
+
+Change swap ini file
+
+
+nano /etc/conf.d/zram.ini
+
+
+
